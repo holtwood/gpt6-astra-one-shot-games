@@ -1,0 +1,19 @@
+# 统一行尾策略：仓库内全部存 LF，检出也固定 LF
+# 即使构建脚本/编辑器在 Windows 上写出 CRLF，提交时也会被归一化为 LF，
+# git diff 不会把纯行尾差异当作改动（git status 仍可能提示，属预期）
+* text=auto
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.py text eol=lf
+*.gitignore text eol=lf
+# 图片按二进制处理
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary

@@ -7,5 +7,5 @@ license_text = (root / 'three-license.txt').read_text()
 code = (root / 'game.js').read_text()
 html = shell.replace('<!-- THREE_LIBRARY -->', '<!--\nThree.js r160\n' + license_text + '\n-->\n<script>\n' + library + '\n</script>').replace('/* GAME_CODE */', code)
 target = root.parent / 'mosswing.html'
-target.write_text(html)
+target.write_text(html, newline='\n')
 print(f'Built {target.name}: {len(html.encode()):,} bytes')
